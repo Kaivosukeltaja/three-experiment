@@ -1,0 +1,69 @@
+Oppimispäiväkirja Three.js
+--------------------------
+
+8:00 - Three.js:n perusteiden lukemista erilaisista tutorialeista ja hienojen demojen katselua. Use casejen miettimistä.
+9:00 - Yeomanilla threejs-projektin luominen testailua varten.
+9:30 - Lueskelua PBR (Physical Based Rendering) -shadereista. Paljon elävämmän näköistä jälkeä. Saisikohan tätä Three.js:ään käyttöön? https://labs.sketchfab.com/siggraph2014/viewer.html?model=c3po
+10:00 - Tutorialien lueskelua perusteista ja shadereista syvällisemmin. Esimerkkiprojektin virittelyä - shaderin vaihto Lambertiksi ja kaksi eriväristä point lightia valaisemaan eri puolilta.
+11:30 - 12:30 Lounastauko.
+12:30 - Syvällisempää lueskelua Phong- ja PBR-shadereista. Blenderillä pyörittelyä.
+13:30 - Hieno Houston-logo blenderillä tehty. Mitenköhän tämän saisi tuotua Threehen meshiksi?
+13:40 - Onnistui! Lambert-shaderilla näyttää tyhmältä. Kokeillaan saisiko Phongina rendattua.
+13:55 - Phong ei muuttanut paljoa, mutta shadingin muuttaminen flatiksi auttoi.
+14:30 - Meshin manipulointi lennossa toimii. Nyt saa tehtyä sen luvatun naaman sulamisen. :)
+15:00 - Skyboxin tekoa pöllityistä textureista http://learningthreejs.com/blog/2011/08/15/lets-do-a-sky/
+15:20 - Shit! Edellisen linkin ohjeet perustuvat vanhaan deprekoituun Three.js-versioon. Texturen lataaminen tapahtuu nykyään CubeTextureLoaderilla. Threen dokumentaatio apuun.
+16:30 - Koko skybox kirjoitettu uudestaan pariin kertaan, valojen kanssa leikitty ja vieläkään ei näy. Jatketaan tästä huomenna.
+
+8:50 - Skybox-säätö jatkuu. Vihdoin oikeat säädöt löytyvät ja samalla syntyy kohdetta kiertävä pyörivä kamera.
+9:30 - Katsotaan saisiko ympäristön heijastumaan Houston-logosta. Saahan sen, heijastuskameran avulla mutta lopputulos näyttää kummalliselta koska tasaisten pintojen heijastukset muuttuvat polygonien rajojen kohdalla.
+10:00 - Haa, skyboxin texturea voi käyttää suoraan envmappina heijastukselle, kunhan ei tarvitse heijastaa muita esineitä. Heijastukset näyttävät silti oudolta.
+
+
+Use caseja
+----------
+
+Tuote-esittelyt:
+ - http://www.sennheiser-reshapingexcellence.com/en
+ - http://www.littleworkshop.fr/renaultespace/
+
+Tiedon visualisointi:
+ - http://armsglobe.chromeexperiments.com/
+
+ Suunnittelutyökalut:
+ - https://www.wanaplan.com
+
+Pelit (duh):
+ - http://gorescript.com/play/
+ - http://helloracer.com/racer-s/ (mobiilidemo)
+ - http://hellorun.helloenjoy.com/
+
+
+Hyviä resursseja
+----------------
+
+http://blog.teamtreehouse.com/real-time-3d-web - Wireframesta normalmappiin demottuna
+https://github.com/mrdoob/three.js/tree/master/utils/exporters/blender
+
+
+Hienoja demoja
+--------------
+
+http://mrdoob.com/ - Three.js:n luojan kotisivut. Monta päräyttävää viritelmää.
+http://www.simonreeves.com/projects/db5/ - Pyörivä vanha Aston Martin
+
+
+Vaihtoehtoisia tekniikoita
+--------------------------
+
+CSS 3D transformaatiot - Erinomaisia yksinkertaisiin pikkuanimaatioihin, ei kuutiota monimutkaisempiin juttuihin
+https://playcanvas.com/ - Monimutkaisempiin kokonaisuuksiin. Edistyneempi mutta maksullinen.
+http://www.babylonjs.com/ - Pelimoottori isoihin projekteihin. Mukana audiotuki, fysiikkaa yms.
+https://www.blend4web.com/en/ - Edistyneempi ja monipuolisempi mutta koodi pakko jakaa (GPL) tai ostaa lisenssi. Scenejen importtaus suoraan Blenderistä.
+Unity & Unreal - Todella laajoihin juttuihin mutta tuotokset ovat liian isoja webiin (gigatavuja)
+
+
+Offtopic
+--------
+
+Asm.js pitäisi tutkia tarkemmin - JavaScriptiä jota selain osaa ajaa melkein natiivivauhdilla. Emscripten kääntää C-koodia asm.js:ksi, esim DOSBox.
