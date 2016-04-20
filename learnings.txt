@@ -17,8 +17,12 @@ Oppimispäiväkirja Three.js
 
 8:50 - Skybox-säätö jatkuu. Vihdoin oikeat säädöt löytyvät ja samalla syntyy kohdetta kiertävä pyörivä kamera.
 9:30 - Katsotaan saisiko ympäristön heijastumaan Houston-logosta. Saahan sen, heijastuskameran avulla mutta lopputulos näyttää kummalliselta koska tasaisten pintojen heijastukset muuttuvat polygonien rajojen kohdalla.
-10:00 - Haa, skyboxin texturea voi käyttää suoraan envmappina heijastukselle, kunhan ei tarvitse heijastaa muita esineitä. Heijastukset näyttävät silti oudolta.
-
+10:00 - Haa, skyboxin texturea voi käyttää suoraan envmappina heijastukselle, kunhan ei tarvitse heijastaa muita esineitä. Heijastukset näyttävät silti oudolta. Ilmeisesti vika on modelissa, koska apinan pää toimii hienosti. Kokeillaan saisiko tehtyä hienon peilin naaman alle tähän tapaan: http://threejs.org/examples/webgl_mirror.html
+11:30 - 12:00 Lounastauko.
+13:40 - Peili on vihdoin paikallaan. Pikainen UV-mapping kokeilu apinan naaman kanssa.
+15:15 - UV mapit paikallaan ja apina pyörii hienosti myös mobiilissa heijastuksineen päivineen! Värivalot pois ja aurinkoa emuloiva valo tilalle.
+15:30 - Responsiivisuus. Suoraan SO:sta. http://stackoverflow.com/questions/20290402/three-js-resizing-canvas
+15:30 - 16:00 Miettimistauko.
 
 Use caseja
 ----------

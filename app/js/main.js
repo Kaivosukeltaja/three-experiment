@@ -35,6 +35,7 @@ var meltArray;
 var modelfile = 'monkey.mesh.json';
 
 init();
+window.addEventListener('resize', resizeView, false);
 
 function init() {
 
@@ -83,6 +84,12 @@ function init() {
 
     document.body.appendChild( renderer.domElement );
 
+}
+
+function resizeView() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();    
+    renderer.setSize( window.innerWidth, window.innerHeight );
 }
 
 function initModels() {
@@ -179,7 +186,7 @@ function animate() {
     camera.rotation.y -= 0.001;
     camera.position.z = 50.0 * Math.cos(camera.rotation.y);
     camera.position.x = 50.0 * Math.sin(camera.rotation.y);
-    //melt();
+    // melt();
 
     if(typeof mirror.mirror !== 'undefined') {
         //mirror.camera.updateCubeMap(renderer, scene);
